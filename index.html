@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kalle Sirkesalo - Field CTO at Eficode. Expert in AI-Driven DevOps, Platform Engineering, and DevSecOps.">
+    <title>Kalle Sirkesalo | Field CTO at Eficode</title>
+    <style>
+        :root {
+            --primary-color: #003366; /* Deep professional blue */
+            --secondary-color: #00aaff; /* Eficode/Tech accent blue */
+            --text-color: #333;
+            --bg-light: #f9f9f9;
+            --bg-white: #ffffff;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--bg-white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #001f3f 100%);
+            color: white;
+            padding: 4rem 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .role {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .bio-summary {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #0088cc;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            display: inline-block;
+            margin-bottom: 2rem;
+            padding-bottom: 5px;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .profile-img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Cards (Talks & Posts) */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--bg-white);
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        .card-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 20px;
+            margin-top: 4rem;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-links a {
+                margin: 0 10px;
+            }
+            .profile-img {
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Kalle Sirkesalo</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#speaking">Speaking</a>
+                <a href="#writing">Writing</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="hero-content">
+            <h1>Kalle Sirkesalo</h1>
+            <div class="role">Field CTO at Eficode</div>
+            <p class="bio-summary">
+                Orchestrating AI-Driven DevOps, Platform Engineering, and Secure Software Delivery.
+            </p>
+            <a href="https://www.linkedin.com/in/kallesirkesalo/" class="cta-button" target="_blank">Connect on LinkedIn</a>
+        </div>
+    </header>
+
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <div class="about-grid">
+            <div>
+                <img src="https://www.eficode.com/hs-fs/hubfs/Kalle%20Sirkesalo.jpg?width=600&name=Kalle%20Sirkesalo.jpg" alt="Kalle Sirkesalo" class="profile-img">
+            </div>
+            <div>
+                <p>
+                    I am the <strong>Field CTO at Eficode</strong>, where I have spent over a decade guiding organizations through the complexities of modern software development. My focus lies in integrating <strong>AI-powered tools</strong>, implementing <strong>DevSecOps</strong> best practices, and advancing <strong>Platform Engineering</strong>.
+                </p>
+                <p>
+                    From scaling CI/CD in regulated industries to managing GitHub Enterprise Server environments, I help clients turn business goals into scalable, secure technology roadmaps. I am passionate about responsible AI adoption and ensuring that "pets to cattle" infrastructure transitions result in controlled efficiency rather than chaos.
+                </p>
+                <p>
+                    Outside of technology, I enjoy sailing—a hobby that mirrors my professional commitment to precision, strategy, and adaptability.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="speaking" style="background-color: var(--bg-light);">
+        <div class="container">
+            <h2>Speaking</h2>
+            <p style="margin-bottom: 30px;">I frequently speak at industry events, webinars, and podcasts about DevOps governance, AI, and platform engineering.</p>
+            
+            <div class="grid-cards">
+                <article class="card">
+                    <span class="card-meta">DevConf 2025</span>
+                    <h3>AI-Powered Slopsquatting: Is Your Software Supply Chain Compromised?</h3>
+                    <p>Exposing the nature of AI-driven Slopsquatting and how to implement robust, automated strategies to counter supply chain threats.</p>
+                    <a href="https://www.devconf.pl/speakers/kalle-sirkesalo" target="_blank" class="card-link">View Event &rarr;</a>
+                </article>
+
+                <article class="card">
+                    <span class="card-meta">The DEVOPS Conference</span>
+                    <h3>Modern CI/CD at Scale: From Chaos to Controlled Efficiency</h3>
+                    <p>Practical experiences and strategies for scaling CI/CD processes in regulated industries, emphasizing IaC and security integration.</p>
+                    <a href="https://www.eficode.com/kalle-sirkesalo" target="_blank" class="card-link">Watch Talk &rarr;</a>
+                </article>
+
+                <article class="card">
+                    <span class="card-meta">Eficode Webinar</span>
+                    <h3>GitHub Enterprise Server: Real-Life Lessons</h3>
+                    <p>Drawing from a decade of managing GHES: navigating complex migrations, robust backup strategies, and effective CI/CD integration.</p>
+                    <a href="https://www.eficode.com/kalle-sirkesalo" target="_blank" class="card-link">Watch Talk &rarr;</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="writing" class="container">
+        <h2>Writing & Thoughts</h2>
+        <div class="grid-cards">
+            <article class="card">
+                <span class="card-meta">Blog Post</span>
+                <h3>Azure OpenAI and Your Atlassian Data</h3>
+                <p>How Azure OpenAI can create long-term value for experts and customers, and the time required to truly understand it.</p>
+                <a href="https://www.eficode.com/blog/author/kalle-sirkesalo" target="_blank" class="card-link">Read Article &rarr;</a>
+            </article>
+
+            <article class="card">
+                <span class="card-meta">Blog Post</span>
+                <h3>DevOps in Banking & Finance</h3>
+                <p>Conquering challenges in regulated sectors, covering platform engineering, orchestration, security, and talent management.</p>
+                <a href="https://www.eficode.com/blog/author/kalle-sirkesalo" target="_blank" class="card-link">Read Article &rarr;</a>
+            </article>
+
+            <article class="card">
+                <span class="card-meta">Blog Post</span>
+                <h3>Separation of Duties in DevOps</h3>
+                <p>Overcoming the main challenges of separation of duties in GitLab and modern DevOps workflows.</p>
+                <a href="https://www.eficode.com/blog/author/kalle-sirkesalo" target="_blank" class="card-link">Read Article &rarr;</a>
+            </article>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h3>Get in Touch</h3>
+            <p>Connect with me to discuss DevOps, AI, or Platform Engineering.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/kallesirkesalo/" target="_blank">LinkedIn</a> • 
+                <a href="https://www.eficode.com/kalle-sirkesalo" target="_blank">Eficode Profile</a>
+            </div>
+            <p style="font-size: 0.8rem; margin-top: 2rem; color: #aaa;">&copy; 2026 Kalle Sirkesalo</p>
+        </div>
+    </footer>
+
+</body>
+</html>
