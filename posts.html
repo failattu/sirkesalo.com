@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kalle Sirkesalo - LinkedIn Posts & Thoughts on AI, DevOps, and Platform Engineering">
+    <title>Posts | Kalle Sirkesalo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --sea-deep: #0A3D61;
+            --sea-lighter: #2E6F94;
+            --wood-varnish: #C07D48;
+            --wood-dark: #8B572A;
+            --text-color: #333;
+            --bg-warm: #F8F5F0;
+            --bg-white: #ffffff;
+            --font-heading: 'Merriweather', serif;
+            --font-body: 'Lato', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-color);
+            background-color: var(--bg-warm);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            color: var(--sea-deep);
+            font-weight: 700;
+        }
+
+        nav {
+            background: var(--bg-white);
+            border-bottom: 3px solid var(--sea-lighter);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--sea-deep);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--wood-varnish);
+        }
+
+        /* Page header */
+        .page-header {
+            background: linear-gradient(to bottom, var(--sea-deep) 0%, #001f3f 100%);
+            color: var(--bg-warm);
+            padding: 4rem 20px;
+            text-align: center;
+            border-bottom: 8px solid var(--wood-dark);
+        }
+
+        .page-header h1 {
+            color: var(--bg-white);
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .linkedin-badge {
+            display: inline-block;
+            margin-top: 1.5rem;
+            background: #0077B5;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background 0.3s;
+        }
+
+        .linkedin-badge:hover {
+            background: #005fa3;
+        }
+
+        /* Posts feed */
+        .posts-section {
+            padding: 5rem 20px;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .post-card {
+            background: var(--bg-white);
+            border-radius: 8px;
+            padding: 36px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 32px;
+            border-left: 5px solid var(--sea-lighter);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .post-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.09);
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .post-date {
+            font-size: 0.85rem;
+            color: var(--wood-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .post-tag {
+            font-size: 0.78rem;
+            background: var(--bg-warm);
+            color: var(--sea-lighter);
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-weight: 700;
+            border: 1px solid var(--sea-lighter);
+        }
+
+        .post-card h3 {
+            margin: 0 0 12px 0;
+            font-size: 1.25rem;
+            line-height: 1.4;
+        }
+
+        .post-card p {
+            margin: 0 0 20px 0;
+            color: #444;
+        }
+
+        .post-link {
+            display: inline-block;
+            color: #0077B5;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .post-link:hover {
+            border-color: #0077B5;
+        }
+
+        footer {
+            background: var(--sea-deep);
+            color: var(--bg-warm);
+            text-align: center;
+            padding: 4rem 20px;
+            border-top: 5px solid var(--wood-varnish);
+        }
+
+        footer h3 {
+            color: var(--bg-white);
+        }
+
+        .social-links a {
+            color: var(--wood-varnish);
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--bg-white);
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-links a {
+                margin: 0 10px;
+            }
+            .page-header h1 { font-size: 1.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Kalle Sirkesalo</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#expertise">Expertise</a>
+                <a href="index.html#cases">Case Studies</a>
+                <a href="index.html#speaking">Speaking</a>
+                <a href="index.html#writing">Writing</a>
+                <a href="index.html#next">Next</a>
+                <a href="index.html#youtube">YouTube</a>
+                <a href="posts.html" class="active">Posts</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>Posts & Thoughts</h1>
+        <p>Daily observations on AI, DevOps, Platform Engineering, and building things that last — originally published on LinkedIn.</p>
+        <a href="https://www.linkedin.com/in/kallesirkesalo/" target="_blank" class="linkedin-badge">Follow on LinkedIn</a>
+    </div>
+
+    <section class="posts-section">
+        <div class="container">
+
+            <!-- ADD NEW POSTS AT THE TOP — copy a post-card block and fill in the details -->
+
+            <article class="post-card">
+                <div class="post-meta">
+                    <span class="post-date">April 2026</span>
+                    <span class="post-tag">AI</span>
+                </div>
+                <h3>Your first post title here</h3>
+                <p>Paste the post content here. Keep it as-is or trim it to the key insight — whatever feels right for the web format.</p>
+                <a href="https://www.linkedin.com/in/kallesirkesalo/" target="_blank" class="post-link">Read on LinkedIn &rarr;</a>
+            </article>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3>Get in Touch</h3>
+            <p style="opacity: 0.9;">Connect with me to discuss DevOps, AI, or Platform Engineering strategies.</p>
+            <div class="social-links" style="margin-top: 30px; margin-bottom: 30px;">
+                <a href="https://www.linkedin.com/in/kallesirkesalo/" target="_blank">LinkedIn</a> &bull;
+                <a href="https://www.youtube.com/channel/UCj-Jq5lFipIEMHERhFYswVw" target="_blank">YouTube</a> &bull;
+                <a href="https://www.eficode.com/kalle-sirkesalo" target="_blank">Eficode Profile</a>
+            </div>
+            <p style="font-size: 0.9rem; margin-top: 3rem; opacity: 0.7;">&copy; 2026 Kalle Sirkesalo. Fair winds and following seas.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
